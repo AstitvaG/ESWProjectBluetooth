@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30dp"
+                android:onClick="view_stats"
+                app:cardBackgroundColor="#911077"
+                app:cardCornerRadius="50sp"
+                app:contentPaddingBottom="20sp"
+                app:contentPaddingTop="220sp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:text="Your Device INFORMATION:"
+                        android:textColor="#fff"
+                        android:textSize="0sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/qanelas_soft_bold"
+                            android:text="0.00"
+                            android:textColor="#fff"
+                            android:textSize="0sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-45dp"
+                android:layout_marginBottom="10sp"
+                app:cardBackgroundColor="#571048"
+                app:cardCornerRadius="50sp"
+                app:contentPadding="15sp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/qanelas_soft_bold"
+                        android:text="Audio Control."
+                        android:textColor="#fff"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="40sp"
+                        android:gravity="center"
+                        android:text="Using the distance of students"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="50sp"
+            app:cardElevation="10sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:fontFamily="@font/qanelas_soft_bold"
+                android:text="Available devices:"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="20sp"
+            android:onClick="gaha"
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="50sp"
+            app:cardElevation="10sp"
+            app:contentPadding="30sp"
+            app:contentPaddingBottom="30sp"
+            app:contentPaddingTop="30sp">
+
+
+            <ListView
+                android:id="@+id/pairedlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/ls">
+
+                <TextView
+                    android:id="@+id/tv_stats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="split"
+                    android:padding="20dp"
+                    android:tag="1"
+                    app:cardBackgroundColor="#000"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/btn_media"
+                    app:contentPadding="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/fiesta"
+                        android:onClick="toggle_volume"
+                        android:text="Toggle volume"
+                        android:textColor="#FFF"
+                        android:textSize="20sp" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>
+
